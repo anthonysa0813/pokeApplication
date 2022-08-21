@@ -1,12 +1,11 @@
 @use "./scss/globals";
 @use "./scss/header.scss";
 @use "./scss/mainGrid.scss";
+@use "./scss/resets";
+@use "./scss/buttons";
+@use "./scss/listView.scss";
+@use "./scss/pokemonByName.scss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
   // background: red;
   font-family: var(--font-poppins);
