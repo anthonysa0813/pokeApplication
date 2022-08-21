@@ -1,0 +1,23 @@
+@use "./scss/globals";
+@use "./scss/header.scss";
+@use "./scss/mainGrid.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  // background: red;
+  font-family: var(--font-poppins);
+  margin: 0;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.debug {
+  border: 3px solid brown;
+}

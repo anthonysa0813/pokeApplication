@@ -1,0 +1,23 @@
+.headerContainer {
+  border-bottom: 1px solid #eee;
+  padding-block: 1rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .logoContainer {
+    width: 300px;
+  }
+  .headerGrid {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu ul {
+    display: flex;
+    list-style: none;
+    column-gap: 2rem;
+    align-items: center;
+    height: 100%;
+  }
+}
