@@ -9,7 +9,6 @@ const PokemonByName = () => {
   const [moves, setMoves] = useState({});
   const [description, setDescription] = useState("");
   const { name } = useParams();
-  console.log({ pokemonInfo });
 
   useEffect(() => {
     getFetch(`https://pokeapi.co/api/v2/pokemon/${name}`).then((res) =>
@@ -31,7 +30,7 @@ const PokemonByName = () => {
         <div className="wrapper">
           <div className="pokemonByNameContainer">
             <SecondaryMenu />
-            <div className="pokemonByNameGrid debug">
+            <div className="pokemonByNameGrid ">
               <div className="pokemonImage">
                 <img
                   src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${pokemonInfo.id}.svg`}
@@ -50,9 +49,49 @@ const PokemonByName = () => {
                 <p>{pokemonInfo.base_experience}</p>
                 <h3>Height</h3>
                 <p>{pokemonInfo.height}</p>
-                <h3>Moves</h3>
-                <p>{moves?.name}</p>
-                <p>{description}</p>
+                <h3>Gifs</h3>
+                <div className="gifsContainer">
+                  <div className="div">
+                    <img
+                      src={
+                        pokemonInfo?.sprites?.versions["generation-v"][
+                          "black-white"
+                        ].animated["back_default"]
+                      }
+                      alt=""
+                    />
+                  </div>
+                  <div className="div">
+                    <img
+                      src={
+                        pokemonInfo?.sprites?.versions["generation-v"][
+                          "black-white"
+                        ].animated["front_default"]
+                      }
+                      alt=""
+                    />
+                  </div>
+                  <div className="div">
+                    <img
+                      src={
+                        pokemonInfo?.sprites?.versions["generation-v"][
+                          "black-white"
+                        ].animated["back_shiny"]
+                      }
+                      alt=""
+                    />
+                  </div>
+                  <div className="div">
+                    <img
+                      src={
+                        pokemonInfo?.sprites?.versions["generation-v"][
+                          "black-white"
+                        ].animated["front_shiny"]
+                      }
+                      alt=""
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

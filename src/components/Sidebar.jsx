@@ -6,9 +6,6 @@ import { getPokemonsTypeApiThunk } from "../store/pokemon/pokemonThunk";
 const Sidebar = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  if (state) {
-    console.log({ state });
-  }
 
   useEffect(() => {
     dispatch(getPokemonsTypeApiThunk());
