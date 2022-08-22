@@ -26,8 +26,7 @@ const ListPokemons = () => {
       setActiveSearch(false);
     }
     const pokeFilter = pokemons?.data.filter((poke) => {
-      console.log({ name: poke.name });
-      if (poke.name.startsWith(pokemonInput)) {
+      if (poke.name.startsWith(pokemonInput.toLowerCase())) {
         return poke;
       }
     });
