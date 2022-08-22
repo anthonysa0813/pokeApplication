@@ -1,6 +1,6 @@
 # Pokemon App
 
-![imagen_pokemonApp](src/assets/images/pokeapp.png)
+![imagenpokemonApp](src/assets/images/pokeapp.png)
 
 Antes de ejecutar el proyecto, se debe de instalar las dependencias.
 
