@@ -13,3 +13,12 @@ Parra correr el proyecto
   ó
   yarn dev
 ```
+
+## Stack principal
+
+- react redux toolkit
+- react toastify
+- sass
+- react router dom v6
+- react icons
+- vite
