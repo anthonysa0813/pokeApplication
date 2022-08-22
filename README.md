@@ -24,3 +24,7 @@ Parra correr el proyecto
 - react router dom v6
 - react icons
 - vite
+
+## Página súbida en Netlify
+
+url_page: https://sweet-sherbet-78d691.netlify.app/
