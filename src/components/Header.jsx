@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { ModalMenuContext } from "../context/ModalMenu";
 import MenuBurguer from "./MenuBurguer";
@@ -16,8 +16,8 @@ const Header = () => {
           </Link>
           <nav className="menu ">
             <ul>
-              <Link to="/">Home</Link>
-              <Link to="/dashboard/my-favorites">My Favorites</Link>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/dashboard/my-favorites">My Favorites</NavLink>
               {/* <li onClick={() => setDarkModeState((state) => !state)}>
                 Dark mode
               </li> */}

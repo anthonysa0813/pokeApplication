@@ -20,6 +20,7 @@
 
 .listCardContainer {
   margin-block-start: 50px;
+  margin-block-end: 150px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: 270px;
