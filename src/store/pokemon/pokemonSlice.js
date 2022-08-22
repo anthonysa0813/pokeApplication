@@ -7,6 +7,8 @@ export const pokemonSlice = createSlice({
     data: [],
     types: [],
     error: null,
+    page: 0,
+    favs: [],
   },
   reducers: {
     startLoadingPokemonApi: (state /* action */) => {
@@ -19,9 +21,23 @@ export const pokemonSlice = createSlice({
     setPokemonTypeApi: (state, action) => {
       state.types = action.payload;
     },
+    addPokemonToFavs: (state, action) => {
+      state.favs = [...state.favs, action.payload];
+    },
+    deletePokemonToFavs: (state, action) => {
+      const newFavsArr = state.favs.filter(
+        (poke) => poke.name !== action.payload.name
+      );
+      state.favs = newFavsArr;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { startLoadingPokemonApi, setPokemonTypeApi, setPokemonApi } =
-  pokemonSlice.actions;
+export const {
+  startLoadingPokemonApi,
+  setPokemonTypeApi,
+  setPokemonApi,
+  addPokemonToFavs,
+  deletePokemonToFavs,
+} = pokemonSlice.actions;

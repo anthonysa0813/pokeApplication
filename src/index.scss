@@ -5,6 +5,10 @@
 @use "./scss/buttons";
 @use "./scss/listView.scss";
 @use "./scss/pokemonByName.scss";
+@use "./scss/favoritesPage.scss";
+@use "./scss/menuBurguer.scss";
+@use "./scss/menuLeftActive.scss";
+@use "./scss/home.scss";
 
 body {
   // background: red;
@@ -19,4 +23,22 @@ body {
 
 .debug {
   border: 3px solid brown;
+}
+
+.dark-content {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.light-content {
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+.text-primary {
+  color: var(--bg-primary);
+}
+
+.text-dark {
+  color: var(--color-white) !important;
 }

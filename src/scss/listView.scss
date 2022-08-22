@@ -41,3 +41,21 @@
     }
   }
 }
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: var(--bg-white);
+  z-index: 10;
+}
+.pageContainer {
+  column-gap: 1rem;
+  display: flex;
+}

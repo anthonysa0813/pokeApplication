@@ -1,21 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
+import { ModalMenuContext } from "../context/ModalMenu";
+import MenuBurguer from "./MenuBurguer";
+import MenuLeftActive from "./MenuLeftActive";
 
 const Header = () => {
+  const { showModal } = useContext(ModalMenuContext);
   return (
-    <header className="headerContainer ">
+    <header className={`headerContainer`}>
       <div className="wrapper">
         <div className="headerGrid">
-          <div className="logoContainer ">
+          <Link to="/dashboard" className="logoContainer ">
             <img src={logo} alt="Logo de Pokemon App" />
-          </div>
+          </Link>
           <nav className="menu ">
             <ul>
-              <li>Home</li>
-              <li>Dark mode</li>
+              <Link to="/">Home</Link>
+              <Link to="/dashboard/my-favorites">My Favorites</Link>
+              {/* <li onClick={() => setDarkModeState((state) => !state)}>
+                Dark mode
+              </li> */}
             </ul>
           </nav>
+          <MenuBurguer />
         </div>
+        {showModal ? <MenuLeftActive /> : null}
       </div>
     </header>
   );

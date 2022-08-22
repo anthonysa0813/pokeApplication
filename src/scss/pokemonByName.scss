@@ -23,16 +23,64 @@
 .pokemonByNameGrid {
   display: flex;
   margin-block: 50px;
+  flex-wrap: wrap;
 }
 
 .pokemonImage {
   flex: 1 0 50%;
   display: flex;
   justify-content: center;
+  padding: 2rem;
+  img {
+    width: 100%;
+  }
 }
 
 .pokemonInfo {
   flex: 1 0 50%;
+  padding: 2rem;
+  h3 {
+    color: var(--bg-black);
+  }
+  ul {
+    list-style: none;
+    li {
+      display: flex;
+      column-gap: 0.5rem;
+      align-items: center;
+    }
+  }
+}
+
+.boxPokedex {
+  width: 16px;
+  height: 16px;
+  & img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.infoHead {
+  display: flex;
+  column-gap: 2rem;
+  // justify-content: space-between;
+  h1 {
+    color: var(--bg-primary);
+    margin-block-end: 20px;
+  }
+}
+
+.buttonSection {
+  margin-block: 20px;
+  button {
+    width: 100%;
+  }
+  @media screen and (min-width: 600px) {
+    button {
+      width: 50%;
+    }
+  }
 }
 
 // gifs

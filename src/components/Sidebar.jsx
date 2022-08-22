@@ -13,7 +13,7 @@ const Sidebar = () => {
 
   return (
     <aside className="">
-      <h4>Tipos de Pokemón</h4>
+      <h4 className="text-primary">Tipos de Pokemón</h4>
       <ul>
         {state.pokemons?.types.map((type) => {
           return <li key={type.name}>{type.name}</li>;

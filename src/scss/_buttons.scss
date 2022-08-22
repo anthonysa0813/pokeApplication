@@ -12,3 +12,16 @@
   border: 1px solid var(--bg-primary);
   border-radius: 0.25rem;
 }
+
+.button-outeline-secondary {
+  padding: 0.5rem 0.75rem;
+  color: var(--bg-secondary);
+  background-color: var(--bg-white);
+  border: 1px solid var(--bg-secondary);
+  border-radius: 0.25rem;
+  transition: all 0.3s;
+  &:hover {
+    color: var(--bg-white);
+    background-color: var(--bg-secondary);
+  }
+}
